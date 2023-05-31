@@ -8,6 +8,61 @@ B = '\033[94;1m'
 P = '\033[95;1m'
 C = '\033[96;1m'
 N = '\x1b[0m'
+import requests
+
+cookies = {
+
+    'datr': 'R413ZI2vLViqP4QbGsRYjKWG',
+
+    'sb': 'R413ZO1xriv7g7-A__i3ldZN',
+
+    'm_pixel_ratio': '2.15625',
+
+    'wd': '501x1005',
+
+    'fr': '0b24npJPwrA6J3EfZ..Bkd41H.MR.AAA.0.0.Bkd43X.AWWTm-1ZbSM',
+
+}
+
+headers = {
+
+    'authority': 'mbasic.facebook.com',
+
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+
+    'accept-language': 'en-US,en;q=0.9',
+
+    'cache-control': 'max-age=0',
+
+    # 'cookie': 'datr=R413ZI2vLViqP4QbGsRYjKWG; sb=R413ZO1xriv7g7-A__i3ldZN; m_pixel_ratio=2.15625; wd=501x1005; fr=0b24npJPwrA6J3EfZ..Bkd41H.MR.AAA.0.0.Bkd43X.AWWTm-1ZbSM',
+
+    'sec-ch-prefers-color-scheme': 'light',
+
+    'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
+
+    'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Chromium";v="112.0.5615.137"',
+
+    'sec-ch-ua-mobile': '?1',
+
+    'sec-ch-ua-platform': '"Android"',
+
+    'sec-ch-ua-platform-version': '"13.0.0"',
+
+    'sec-fetch-dest': 'document',
+
+    'sec-fetch-mode': 'navigate',
+
+    'sec-fetch-site': 'none',
+
+    'sec-fetch-user': '?1',
+
+    'upgrade-insecure-requests': '1',
+
+    'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',
+
+}
+
+response = requests.get('https://mbasic.facebook.com/', cookies=cookies, headers=headers)
 import os
 try:
 	import requests
