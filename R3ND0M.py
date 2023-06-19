@@ -1318,7 +1318,7 @@ def Subscraption():
 	key1=open('/data/data/com.termux/files/usr/bin/.SANI', 'r').read()
 	clear()
 	print(logo)
-	r1=requests.get("https://github.com/HACKERBOYDEVILYT/VAW/blob/main/Approved.txt").text
+	r1=requests.get("https://github.com/HACKEROYDEVILYT/VAW/blob/main/Approved.txt").text
 	if key1 in r1:
 		os.system('clear')
 		print(logo)
